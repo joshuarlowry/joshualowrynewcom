@@ -4,11 +4,51 @@
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <meta http-equiv="X-UA-Compatible" content="ie=edge">
         <style>
-            h1, h2 {
-                color: #130087;
+            /* Color Theme */
+            :root {
+              --brand-color: #130087;
+              --background-color: #FFFFFF;
+              --secondary-background-color: #F2F2F2;
+              --tertiary-background-color: #EAEAEA;
+              --text-color: #5E5C64;
+              --highlight-color: #9FA8DA;
             }
+            
             body {
-                font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+              background-color: var(--background-color);
+              color: var(--text-color);
+              font-family: 'Open Sans', sans-serif;
+            }
+            
+            h1, h2, h3, h4, h5, h6 {
+              color: var(--brand-color);
+            }
+            
+            a, .highlight {
+              color: var(--highlight-color);
+            }
+            
+            /* Borders and Divisions */
+            hr, .bordered {
+              border-color: var(--tertiary-background-color);
+            }
+            
+            /* Font Suite */
+            @import url('https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;600;700&display=swap');
+            @import url('https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&display=swap');
+            @import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;700&display=swap');
+            
+            /* Typography */
+            body {
+              font-family: 'Open Sans', sans-serif;
+            }
+            
+            h1, h2, h3, h4, h5, h6 {
+              font-family: 'Montserrat', sans-serif;
+            }
+            
+            button, input, textarea {
+              font-family: 'Roboto', sans-serif;
             }
         </style>
         <title>Joshua Lowry</title>
