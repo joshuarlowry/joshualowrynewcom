@@ -1,0 +1,38 @@
+---
+layout: base.njk
+title: "Design Leader"
+description: "I am a nimble design leader comfortable with uncharted territory and collaborating with cross-discipline teams."
+---
+
+<article class="portfolio-content">
+  <header class="hero-section">
+    <h1>{{ site.author }}</h1>
+    <p class="highlight tagline">{{ site.tagline }}</p>
+  </header>
+
+  <section class="content-section" id="about" aria-labelledby="about-heading">
+    <h2 id="about-heading" class="sr-only">About</h2>
+    <p>{{ site.description }}</p>
+    <p>Together, we will determine the appropriate practices. Our approach will be different based on your experience and needs. What challenges are you having?</p>
+  </section>
+
+  <section class="content-section" id="leadership" aria-labelledby="leadership-heading">
+    <h2 id="leadership-heading">Leadership</h2>
+    <p>As a design leader, I am always curious and learning. How are people organizing around problems? How are teams articulating their research and design needs? Are there new standards that might influence our designs? What does it mean to process seismic data?</p>
+  </section>
+
+  <section class="content-section" id="design" aria-labelledby="design-heading">
+    <h2 id="design-heading">Design</h2>
+    <p>My design methodology is commingled with research. I keep the flow of work moving with tactical research including short generative activities and evaluative techniques. I have usability tested paper prototypes through production systems.</p>
+    
+    <p>As I understand the broader challenges of a product/group/organization, I author research proposals for review. The most interesting research proposal that I authored sent one of our user researchers to Angola. The coldest place I've been for research is Cold Lake, Canada where it was -50F.</p>
+  </section>
+
+  <section class="content-section" id="contact" aria-labelledby="contact-heading">
+    <h2 id="contact-heading">Contact</h2>
+    <p>Want to work together? Contact me on <a href="{{ site.linkedin }}" 
+       aria-label="Connect with {{ site.author }} on LinkedIn"
+       rel="noopener noreferrer"
+       target="_blank">LinkedIn</a></p>
+  </section>
+</article>
