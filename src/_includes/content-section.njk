@@ -1,0 +1,30 @@
+{# 
+  Reusable content section component
+  
+  Usage:
+  {% set sectionData = content.about %}
+  {% set sectionId = "about" %}
+  {% include "content-section.njk" %}
+#}
+
+<section class="content-section" id="{{ sectionId }}" aria-labelledby="{{ sectionId }}-heading">
+  <h2 id="{{ sectionId }}-heading" class="{% if not sectionData.showHeading %}sr-only{% endif %}">
+    {{ sectionData.heading }}
+  </h2>
+  
+  {% for paragraph in sectionData.content %}
+    <p>{{ paragraph }}</p>
+  {% endfor %}
+  
+  {# Optional CTA for contact section #}
+  {% if sectionData.cta %}
+    <p>
+      <a href="{{ site.linkedin }}" 
+         aria-label="{{ sectionData.cta.ariaLabel }}"
+         rel="noopener noreferrer"
+         target="_blank">
+        {{ sectionData.cta.text }}
+      </a>
+    </p>
+  {% endif %}
+</section>

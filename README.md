@@ -17,16 +17,20 @@ A modern, accessible static site built with [Eleventy (11ty)](https://11ty.dev/)
 ```
 src/
 ├── _data/
-│   └── site.js              # Global site configuration
+│   ├── site.js              # Global site configuration
+│   └── content.js           # Modular content data
 ├── _includes/
 │   ├── footer.njk           # Footer component
-│   └── logo.njk             # Logo component  
+│   ├── logo.njk             # Logo component
+│   ├── hero-section.njk     # Hero section component
+│   ├── content-section.njk  # Generic content section component
+│   └── page-sections.njk    # Section orchestration component
 ├── _layouts/
 │   └── base.njk             # Base HTML layout
 ├── css/
 │   └── main.css             # Main stylesheet
 ├── assets/                  # Static assets (images, etc.)
-├── index.njk                # Home page content
+├── index.njk                # Home page assembly
 ├── robots.txt               # Search engine directives
 └── sitemap.xml              # XML sitemap
 ```
@@ -135,17 +139,41 @@ The site uses a mobile-first approach with breakpoints:
 
 ## 📚 Modular Content Principles
 
-### Component Structure
+### Component Architecture
 - **Layouts**: Base templates for different page types
-- **Includes**: Reusable components (header, footer, navigation)
-- **Data Files**: Centralized configuration and content
-- **Partials**: Smaller, focused content blocks
+- **Generic Components**: Reusable templates that work with any content
+- **Specific Components**: Specialized components for unique layouts
+- **Orchestration Components**: Components that combine multiple elements
+- **Data Files**: Centralized configuration and structured content
 
-### Content Organization
-- Semantic HTML5 elements
-- Logical heading hierarchy
-- Structured data with microformats
-- Separation of content and presentation
+### Content Structure
+- **Separation of Concerns**: Content data separated from presentation
+- **Reusable Templates**: Generic components work with any content data
+- **Semantic HTML**: Proper HTML5 elements and ARIA structure
+- **Logical Flow**: Content organized in meaningful sections
+
+### Content Management
+- **Data-Driven**: All content stored in structured JavaScript objects
+- **Easy Updates**: Change content without touching HTML/templates
+- **Version Control**: Track content changes separately from code
+- **Extensible**: Easy to add new content types and sections
+
+### Example Structure
+```javascript
+// src/_data/content.js
+{
+  sectionName: {
+    heading: "Section Title",
+    showHeading: true,
+    content: [
+      "First paragraph...",
+      "Second paragraph..."
+    ]
+  }
+}
+```
+
+For detailed content management instructions, see [CONTENT_GUIDE.md](CONTENT_GUIDE.md).
 
 ## 🔄 Deployment
 
