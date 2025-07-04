@@ -1,0 +1,30 @@
+{# About Section #}
+{% set sectionData = content.about %}
+{% set sectionId = "about" %}
+{% include "content-section.njk" %}
+
+{# Leadership Section #}
+{% set sectionData = content.leadership %}
+{% set sectionId = "leadership" %}
+{% include "content-section.njk" %}
+
+{# Design Section #}
+{% set sectionData = content.design %}
+{% set sectionId = "design" %}
+{% include "content-section.njk" %}
+
+{# Contact Section #}
+{% set sectionData = content.contact %}
+{% set sectionId = "contact" %}
+<section class="content-section" id="{{ sectionId }}" aria-labelledby="{{ sectionId }}-heading">
+  <h2 id="{{ sectionId }}-heading" class="{% if not sectionData.showHeading %}sr-only{% endif %}">
+    {{ sectionData.heading }}
+  </h2>
+  
+  <p>Want to work together? Contact me on 
+    <a href="{{ site.linkedin }}" 
+       aria-label="Connect with {{ site.author }} on LinkedIn"
+       rel="noopener noreferrer"
+       target="_blank">{{ sectionData.cta.text }}</a>
+  </p>
+</section>
