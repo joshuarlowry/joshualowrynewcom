@@ -37,25 +37,37 @@ src/
 
 ## 🚀 Getting Started
 
+### Local Development
+
 1. **Install dependencies**:
    ```bash
    npm install
    ```
 
-2. **Build the site**:
-   ```bash
-   npm run build
-   ```
-
-3. **Serve locally with hot reload**:
+2. **Serve locally with hot reload**:
    ```bash
    npm run serve
+   ```
+
+3. **Build for production**:
+   ```bash
+   npm run build
    ```
 
 4. **Debug build process**:
    ```bash
    npm run debug
    ```
+
+### Automated Deployment
+
+The site includes GitHub Actions workflows for automated deployment:
+
+- **Push to main branch** → Automatic build and deployment
+- **Pull requests** → Build validation (no deployment)
+- **Multiple platforms** → GitHub Pages, Netlify, Vercel options
+
+See [DEPLOYMENT_GUIDE.md](DEPLOYMENT_GUIDE.md) for complete setup instructions.
 
 ## ♿ Accessibility Features
 
@@ -177,12 +189,26 @@ For detailed content management instructions, see [CONTENT_GUIDE.md](CONTENT_GUI
 
 ## 🔄 Deployment
 
-The site generates static files in the `_site/` directory. Deploy to any static hosting service:
+The site uses GitHub Actions for automated building and deployment. Multiple deployment options are available:
 
-- **Netlify**: Connect your repository for automatic deploys
-- **Vercel**: Deploy with zero configuration
-- **GitHub Pages**: Use the build action for automated deployment
-- **Traditional hosting**: Upload `_site/` contents to your server
+### Quick Start (GitHub Pages)
+1. Enable GitHub Pages in repository settings
+2. Select "GitHub Actions" as the source
+3. Push to main branch - site automatically builds and deploys!
+
+### Other Options
+- **GitHub Pages**: Zero configuration, built-in SSL, free hosting
+- **Netlify**: Advanced features, form handling, edge functions
+- **Vercel**: Global CDN, performance optimization, analytics
+
+📖 **For detailed setup instructions, see [DEPLOYMENT_GUIDE.md](DEPLOYMENT_GUIDE.md)**
+
+### Manual Deployment
+For traditional hosting, build locally and upload the `_site/` directory:
+```bash
+npm run build
+# Upload _site/ contents to your server
+```
 
 ## 🤝 Contributing
 
