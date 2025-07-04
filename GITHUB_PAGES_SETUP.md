@@ -56,6 +56,7 @@ To update your site content:
 - Check the **Actions** tab for error details
 - Verify `package.json` has correct dependencies
 - Test locally with `npm run build`
+- Ensure you're pushing to `main` or `master` branch
 
 ### Site Not Updating?
 - Check that GitHub Pages is enabled
