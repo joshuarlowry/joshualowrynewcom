@@ -32,9 +32,7 @@
 project/
 ├── .github/
 │   └── workflows/
-│       ├── build-deploy.yml      # GitHub Pages deployment
-│       ├── netlify-deploy.yml    # Netlify deployment (alternative)
-│       └── vercel-deploy.yml     # Vercel deployment (alternative)
+│       └── build-deploy.yml      # GitHub Pages deployment
 ├── src/
 │   ├── _data/
 │   │   ├── site.js               # Global site configuration
@@ -64,22 +62,23 @@ project/
 └── PROJECT_SUMMARY.md            # This file
 ```
 
-## 🚀 Deployment Options
+## 🚀 GitHub Pages Deployment
 
-### 1. **GitHub Pages** (Recommended)
-- **Setup**: Enable GitHub Pages → Select "GitHub Actions" as source
-- **Features**: Free hosting, built-in SSL, automatic deployment
-- **Best for**: Simple setup, GitHub-hosted repositories
+### Setup Process
+1. **Enable GitHub Pages**: Go to repository Settings → Pages
+2. **Select Source**: Choose "GitHub Actions" as the source
+3. **Push to Deploy**: Push to main branch → automatic deployment!
 
-### 2. **Netlify**
-- **Setup**: Configure secrets, enable workflow
-- **Features**: Preview deployments, form handling, edge functions
-- **Best for**: Advanced features, professional projects
+### Features
+- **Free Hosting**: No cost for public repositories
+- **Built-in SSL**: Automatic HTTPS certificates
+- **Custom Domains**: Add CNAME file for custom domain support
+- **Automatic Builds**: Every push to main triggers a new deployment
+- **Build Validation**: Pull requests are tested before merge
 
-### 3. **Vercel**
-- **Setup**: Configure tokens and IDs
-- **Features**: Global CDN, performance optimization, analytics
-- **Best for**: Performance-critical sites, modern deployment
+### Your Site URL
+- **Default**: `https://yourusername.github.io/repository-name`
+- **Custom Domain**: Configure via CNAME file
 
 ## 📝 Content Management
 

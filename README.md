@@ -61,13 +61,13 @@ src/
 
 ### Automated Deployment
 
-The site includes GitHub Actions workflows for automated deployment:
+The site includes GitHub Actions for automated GitHub Pages deployment:
 
 - **Push to main branch** → Automatic build and deployment
 - **Pull requests** → Build validation (no deployment)
-- **Multiple platforms** → GitHub Pages, Netlify, Vercel options
+- **GitHub Pages** → Free hosting with built-in SSL
 
-See [DEPLOYMENT_GUIDE.md](DEPLOYMENT_GUIDE.md) for complete setup instructions.
+📖 **See [GITHUB_PAGES_SETUP.md](GITHUB_PAGES_SETUP.md) for 2-minute setup instructions.**
 
 ## ♿ Accessibility Features
 
@@ -191,17 +191,22 @@ For detailed content management instructions, see [CONTENT_GUIDE.md](CONTENT_GUI
 
 The site uses GitHub Actions for automated building and deployment. Multiple deployment options are available:
 
-### Quick Start (GitHub Pages)
-1. Enable GitHub Pages in repository settings
-2. Select "GitHub Actions" as the source
-3. Push to main branch - site automatically builds and deploys!
+### GitHub Pages Setup
+1. **Enable GitHub Pages**:
+   - Go to your repository Settings → Pages
+   - Under "Source", select "GitHub Actions"
+   
+2. **Deploy**:
+   - Push to main branch
+   - Site automatically builds and deploys!
+   - Your site will be available at `https://yourusername.github.io/repository-name`
 
-### Other Options
-- **GitHub Pages**: Zero configuration, built-in SSL, free hosting
-- **Netlify**: Advanced features, form handling, edge functions
-- **Vercel**: Global CDN, performance optimization, analytics
-
-📖 **For detailed setup instructions, see [DEPLOYMENT_GUIDE.md](DEPLOYMENT_GUIDE.md)**
+### Features
+- ✅ **Free hosting** with GitHub Pages
+- ✅ **Built-in SSL** certificate
+- ✅ **Automatic deployment** on every push to main
+- ✅ **Build validation** on pull requests
+- ✅ **Custom domain** support (add CNAME file)
 
 ### Manual Deployment
 For traditional hosting, build locally and upload the `_site/` directory:
